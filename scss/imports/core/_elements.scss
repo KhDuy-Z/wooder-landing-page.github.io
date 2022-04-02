@@ -1,0 +1,136 @@
+a {
+    color: $text-cl;
+    text-decoration: none;
+    display: flex;
+}
+img {
+    display: block;
+    margin: auto;
+    max-width: 100%;
+}
+strong {
+    font-family: bb;
+}
+
+.-lv1 {
+    @include text(100px, b, 100px, $white-cl, none);
+    font-weight: normal;
+    margin: 0;
+    a {
+        @include text(100px, g, 100px, $white-cl, none);
+    }
+    @include tablet {
+    }
+    @include mobile {
+    }
+}
+
+.btnmain {
+    border: 1px solid #ffffff;
+    padding:12px 40px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    color: #ffffff;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    @include transition(0.3s);
+    i{
+        display: block;
+        margin-left: 15px;
+        position: relative;
+        right: 0;
+        @include transition(0.3s);
+    }
+    .icon-play{
+        width: 20px;
+        margin-right: 10px;
+    }
+    &:hover{
+        background: #bea67c;
+        @include transition(0.3s);
+        i{
+            margin-left: 22px;
+            right: -10px;
+            @include transition(0.3s);
+        }
+    }
+    a{
+        color: #ffffff;
+        font-family: ProximaRG;
+    }
+    @include mobile{
+        padding:4px 15px;
+    }
+}
+
+.btnmore{
+    display: inline-flex;
+    font-family: ProximaEB;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    position: relative;
+    img{
+        margin-left: 10px;
+    }
+    &::before{
+        content: '';
+        width: 35px;
+        height: 2px;
+        background: $yellow-cl;
+        display: block;
+        position: absolute;
+        bottom: -5px;
+        left: 0;
+    }
+    &:hover{
+        opacity: 0.6;
+        @include transition(0.4s);
+    }
+}
+
+.back-to-top{
+    position: fixed;
+    right: 10px;
+    bottom: 10px;
+    width: 50px;
+    height: 50px;
+    background: #bea67c;
+    border-radius: 100px;
+    cursor: pointer;
+}
+
+.popup-video{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: 10000;
+    background: rgba(0,0,0,.7);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    display: none;
+}
+.popup-video .wrap{
+    padding: 5px;
+    background: white;
+    position: relative;
+}
+.popup-video .close{
+    position: absolute;
+    right: -25px;
+    top: -25px;
+    border-radius: 100px;
+    cursor: pointer;
+    font-size: 20px;
+    width: 50px;
+    height: 50px;
+    background: white;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+} 
+

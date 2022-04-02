@@ -1,0 +1,30 @@
+footer{
+	.footer__info{
+		background-color: #000000;
+		margin: auto;
+		padding: 20px;
+		.container{
+			display: flex;
+			align-items: center;
+			justify-content: space-between;
+			.company{
+				font-family: 'ProximaRGB';
+				color: #b0b0b0;
+			}
+			a{
+				cursor: pointer;
+				font-family: 'ProximaRGB';
+				text-decoration: none;
+				color: #b0b0b0;
+			}
+		}
+	}
+	@include mobile{
+		.container{
+			flex-direction: column;
+		}
+		.logotail{
+			margin: 20px auto;
+		}
+	}
+}
